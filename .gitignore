@@ -26,3 +26,12 @@
 *.exe
 *.out
 *.app
+/Fight.udf
+/cocosstudio
+/proj.android
+/proj.ios_mac
+/proj.win32
+/.cocos-project.json
+/config.json
+/Fight.ccs
+/Fight.cfg
