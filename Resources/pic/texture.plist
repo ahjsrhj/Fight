@@ -4,14 +4,53 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>player_stand0.png</key>
+            <key>arrow_left.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{212,2},{56,68}}</string>
+                <string>{{2,2},{85,85}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{85,85}}</string>
+                <key>sourceSize</key>
+                <string>{85,85}</string>
+            </dict>
+            <key>arrow_pressed.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,89},{85,85}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{85,85}}</string>
+                <key>sourceSize</key>
+                <string>{85,85}</string>
+            </dict>
+            <key>arrow_right.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{89,2},{85,85}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{85,85}}</string>
+                <key>sourceSize</key>
+                <string>{85,85}</string>
+            </dict>
+            <key>player_stand0.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{62,176},{56,68}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,0},{56,68}}</string>
                 <key>sourceSize</key>
@@ -20,11 +59,11 @@
             <key>player_stand1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{282,2},{56,68}}</string>
+                <string>{{149,89},{56,68}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,0},{56,68}}</string>
                 <key>sourceSize</key>
@@ -33,11 +72,11 @@
             <key>player_stand2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{352,2},{56,68}}</string>
+                <string>{{120,159},{56,68}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,0},{56,68}}</string>
                 <key>sourceSize</key>
@@ -46,11 +85,11 @@
             <key>player_stand3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{282,2},{56,68}}</string>
+                <string>{{149,89},{56,68}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,0},{56,68}}</string>
                 <key>sourceSize</key>
@@ -59,11 +98,11 @@
             <key>player_walk0.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{72,2},{58,68}}</string>
+                <string>{{2,176},{58,68}}</string>
                 <key>offset</key>
                 <string>{4,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{8,0},{58,68}}</string>
                 <key>sourceSize</key>
@@ -72,11 +111,11 @@
             <key>player_walk1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{66,68}}</string>
+                <string>{{176,2},{66,68}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,0},{66,68}}</string>
                 <key>sourceSize</key>
@@ -85,11 +124,11 @@
             <key>player_walk2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{142,2},{58,68}}</string>
+                <string>{{89,89},{58,68}}</string>
                 <key>offset</key>
                 <string>{4,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{8,0},{58,68}}</string>
                 <key>sourceSize</key>
@@ -98,11 +137,11 @@
             <key>player_walk3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{422,2},{56,68}}</string>
+                <string>{{178,159},{56,68}}</string>
                 <key>offset</key>
                 <string>{5,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{10,0},{56,68}}</string>
                 <key>sourceSize</key>
@@ -116,9 +155,9 @@
             <key>realTextureFileName</key>
             <string>texture.png</string>
             <key>size</key>
-            <string>{492,70}</string>
+            <string>{244,247}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:ad33b3b429533cf3d3184566b499b3f3:012dbc82a3e30d984bf47e196b318eee:ef86396999e18097aad14daa6638d5f9$</string>
+            <string>$TexturePacker:SmartUpdate:f5b7be3a48d37adfcdac29d66de09ed4:0fd39e8ab91af5ebecd43db5c745157c:ef86396999e18097aad14daa6638d5f9$</string>
             <key>textureFileName</key>
             <string>texture.png</string>
         </dict>

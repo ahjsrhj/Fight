@@ -17,6 +17,12 @@ bool GameScene::init() {
 		auto bkLayer = ChapterOneBKLayer::create();
 		this->addChild(bkLayer);
 
+		auto gameLayer = GameLayer::create();
+		this->addChild(gameLayer);
+
+		auto controlLayer = ControlLayer::create();
+		controlLayer->bindGameLayer(gameLayer);
+		this->addChild(controlLayer);
 
 		return true;
 	} else {

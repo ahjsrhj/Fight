@@ -1,6 +1,8 @@
 #pragma once
 #include "cocos2d.h"
 #include "ChapterOneBKLayer.h"
+#include "GameLayer.h"
+#include "ControlLayer.h"
 
 // ”Œœ∑≥°æ∞¿‡ [2/27/2016 aha19]
 
