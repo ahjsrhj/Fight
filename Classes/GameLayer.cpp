@@ -9,15 +9,20 @@ bool GameLayer::init() {
 
 	//添加主角
 	this->player = Player::getInstance();
-	this->player->setPosition(100, 230);
+	this->player->setPosition(1000, 230);
 	this->player->stand();
-	playerBody = PhysicsBody::createBox(this->player->getContentSize());
+	auto playerBody = PhysicsBody::createBox(this->player->getContentSize(), PhysicsMaterial(0,0,0));
 	playerBody->setDynamic(true);
 	//设置刚体的线性阻尼
 	playerBody->setLinearDamping(0.0f);
-	this->player->getSprite()->setPhysicsBody(playerBody);
+	//playerBody->setVelocity(Vec2(1000, 0));
+
+
+	//设置刚体的恢复系数
+	playerBody->getShape(0)->setRestitution(0.0f);
+	this->player->setPhysicsBody(playerBody);
 	this->addChild(this->player);
-	this->player->retain();
+	log("VelocityLimit %f", playerBody->getVelocityLimit());
 
 	return true;
 }
@@ -26,18 +31,18 @@ bool GameLayer::init() {
 void GameLayer::onMoveLeft() {
 	player->setDirection(Direction::DIRECTION_LEFT);
 	this->player->walk();
-	this->playerBody->setVelocity(Vec2(100, 0));
+
 }
 
 void GameLayer::onMoveRight() {
 	player->setDirection(Direction::DIRECTION_RIGHT);
 	this->player->walk();
-	this->playerBody->setVelocity(Vec2(-100, 0));
 
 }
 
 void GameLayer::onStand() {
 	log("GameLayer::onStand");
 	this->player->stand();
-	this->player->getPhysicsBody()->setVelocity(Vec2::ZERO);
+	auto velocity = this->player->getPhysicsBody()->getVelocity();
+	this->player->getPhysicsBody()->setVelocity(Vec2(0, velocity.y));
 }

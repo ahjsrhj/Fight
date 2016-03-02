@@ -51,7 +51,7 @@ void ControlLayer::rightBtnEvent(Ref *pSender, TouchEventType type) {
 	switch (type) {
 	case TouchEventType::TOUCH_EVENT_BEGAN:
 		this->gameLayer->onMoveRight();
-		break;;
+		break;
 	case TouchEventType::TOUCH_EVENT_ENDED:
 	case TouchEventType::TOUCH_EVENT_CANCELED:
 		this->gameLayer->onStand();

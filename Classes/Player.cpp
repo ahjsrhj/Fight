@@ -25,22 +25,22 @@ bool Player::init() {
 		return false;
 	}
 
-	auto sprite = Sprite::createWithSpriteFrameName("player_stand0.png");
+	if (Sprite::initWithSpriteFrameName("player_stand0.png")) {
+		this->initActionWithFile("player_action.txt");
 
-	this->bindSprite(sprite);
-
-	this->initActionWithFile("player_action.txt");
-
-	this->setDirection(Direction::DIRECTION_RIGHT);
+		this->setDirection(Direction::DIRECTION_RIGHT);
+	}
 
 	return true;
 }
 
 
 void Player::walk() {
+	this->stopAllActions();
 	this->runActionWithString("player_walk");
 }
 
 void Player::stand() {
+	this->stopAllActions();
 	this->runActionWithString("player_stand");
 }

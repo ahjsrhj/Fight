@@ -38,11 +38,6 @@ cocos2d::Animation * Entity::createAnimation(const char *str, int num) {
 	return animation;
 }
 
-void Entity::bindSprite(Sprite *sprite) {
-	this->sprite = sprite;
-	this->addChild(this->sprite);
-}
-
 void Entity::initActionWithFile(const char *str) {
 	string data = FileUtils::getInstance()->getStringFromFile(str);
 	unsigned int pos;
@@ -63,16 +58,16 @@ void Entity::initActionWithFile(const char *str) {
 }
 
 void Entity::runActionWithString(string str) {
-	this->sprite->runAction(this->actionMap.at(str));
+	this->runAction(this->actionMap.at(str));
 }
 
 void Entity::setDirection(Direction direction) {
 	this->direction = direction;
 
 	if (this->direction == DIRECTION_LEFT) {
-		this->sprite->setFlippedX(false);
+		this->setFlippedX(false);
 	} else {
-		this->sprite->setFlippedX(true);
+		this->setFlippedX(true);
 	}
 }
 
@@ -80,11 +75,4 @@ Direction Entity::getDirection() {
 	return this->direction;
 }
 
-const cocos2d::Size& Entity::getContentSize() const {
-	return this->sprite->getContentSize();
-}
-
-cocos2d::Sprite * Entity::getSprite() {
-	return this->sprite;
-}
 

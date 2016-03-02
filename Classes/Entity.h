@@ -17,7 +17,7 @@ typedef struct {
 	int num;
 } ActionList;
 
-class Entity : public Node {
+class Entity : public Sprite{
 public:
 	Entity();
 	~Entity();
@@ -25,16 +25,6 @@ public:
 	virtual bool init();
 
 	CREATE_FUNC(Entity);
-
-	//************************************
-	// Method:    bindSprite
-	// FullName:  Entity::bindSprite
-	// Access:    public 
-	// Returns:   void
-	// Qualifier: 将子对象创建的sprite对象绑定到成员变量sprite上
-	// Parameter: Sprite * sprite
-	//************************************
-	void bindSprite(Sprite *sprite);
 
 	//************************************
 	// Method:    initActionWithFile
@@ -54,9 +44,6 @@ public:
 
 	Direction getDirection();
 
-	virtual const Size& getContentSize() const override;
-
-	Sprite *getSprite();
 
 private:
 	//************************************
@@ -73,7 +60,6 @@ private:
 
 
 private:
-	Sprite *sprite;
 
 	Map<string, Animate*> actionMap;
 
